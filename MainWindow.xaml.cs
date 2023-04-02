@@ -173,11 +173,13 @@ namespace Serial_Data_Send
                     {
                         serial.WriteLine(StringToSendComboBox.Text + DateTime.Now.ToString("yyyy/dd/MM HH.mm.ss"));
                         MessageBoxField.Text += StringToSendComboBox.Text + DateTime.Now.ToString("yyyy/dd/MM HH.mm.ss") + Environment.NewLine;
+                        MessageBoxField.ScrollToEnd();
                     }
                     else
                     {
                         serial.WriteLine(StringToSendComboBox.Text);
                         MessageBoxField.Text += StringToSendComboBox.Text + Environment.NewLine;
+                        MessageBoxField.ScrollToEnd();
                     }
                     
 
@@ -189,9 +191,6 @@ namespace Serial_Data_Send
             }
         }
 
-        private void MessageBoxField_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
-        {
-
-        }
+      
     }
 }

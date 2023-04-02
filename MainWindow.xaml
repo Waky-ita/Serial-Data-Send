@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Data_Set_ASC"
         mc:Ignorable="d"
-        Title="Serial Data Send" Height="450" Width="475" Background="White" ResizeMode="CanResizeWithGrip" MinHeight="450" MaxHeight="450" >
+        Title="Serial Data Send" Height="460" Width="475" Background="White" ResizeMode="CanResizeWithGrip"  MinHeight="460" MaxHeight="460" MinWidth="475">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -63,29 +63,29 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid Margin="0,0,0,12" VerticalAlignment="Top">
+    <Grid Margin="0,0,0,-6">
         <ComboBox x:Name="AviablePortsComboBox" HorizontalAlignment="Left" Margin="92,40,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
         <ComboBox x:Name="AviableBaudRateComboBox" HorizontalAlignment="Left" Margin="92,67,0,0" VerticalAlignment="Top" Width="120" Height="22" SelectedIndex="9"/>
         <ComboBox x:Name="AviableDataBitsComboBox" HorizontalAlignment="Left" Margin="92,94,0,0" VerticalAlignment="Top" Width="120" Height="22" SelectedIndex="3"/>
         <ComboBox x:Name="AviableStopBitsComboBox" HorizontalAlignment="Left" Margin="92,121,0,0" VerticalAlignment="Top" Width="120" Height="22" SelectedIndex="0"/>
         <ComboBox x:Name="AviableParityBitsComboBox" HorizontalAlignment="Left" Margin="92,148,0,0" VerticalAlignment="Top" Width="120" Height="22" SelectedIndex="0"/>
-        <Button x:Name="SendButton" Content="Send" HorizontalAlignment="Left" Margin="26,352,0,0" Width="186" Style="{DynamicResource RoundedBordersButton}" Height="38" VerticalAlignment="Top" Click="Button_Click_2"/>
+        <Button x:Name="SendButton" Content="Send" HorizontalAlignment="Left" Margin="26,356,0,0" Width="186" Style="{DynamicResource RoundedBordersButton}" Height="38" VerticalAlignment="Top" Click="Button_Click_2"/>
         <Label Content="Port" HorizontalAlignment="Left" Margin="15,36,0,0" VerticalAlignment="Top" Height="26" Width="72"/>
         <Label Content="Baud Rate" HorizontalAlignment="Left" Margin="15,63,0,0" VerticalAlignment="Top" Height="26" Width="72"/>
         <Label Content="Data Bits" HorizontalAlignment="Left" Margin="15,90,0,0" VerticalAlignment="Top" Height="26" Width="72"/>
         <Label Content="Stop Bits" HorizontalAlignment="Left" Margin="15,117,0,0" VerticalAlignment="Top" Height="26" Width="72"/>
         <Label Content="Parity Bits" HorizontalAlignment="Left" Margin="15,144,0,0" VerticalAlignment="Top" Height="26" Width="72"/>
-        <GroupBox Header="Port Settings" Margin="10,10,0,0" HorizontalAlignment="Left" Width="220" Height="175" VerticalAlignment="Top"/>
-        <GroupBox Header="Connection" Margin="10,190,0,0" Height="85" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220"/>
-        <Button x:Name="ClosePortButton" Content="Close" HorizontalAlignment="Left" Margin="132,222,0,0" VerticalAlignment="Top" Height="35" Width="80" Style="{DynamicResource RoundedBordersButton}" Click="Button_Click_1"/>
-        <Button x:Name="OpenPortButton" Style="{DynamicResource RoundedBordersButton}" Content="Open" HorizontalAlignment="Left" Margin="26,222,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
-        <GroupBox Header="Message" Margin="244,10,11,0">
-            <TextBlock x:Name="MessageBoxField" TextWrapping="Wrap" Height="370" Margin="10,0,-2,0"    />
+        <GroupBox Header="Port Settings" Margin="10,10,0,0" HorizontalAlignment="Left" Width="220" Height="179" VerticalAlignment="Top"/>
+        <GroupBox Header="Connection" Margin="10,194,0,0" HorizontalAlignment="Left" Width="220" Height="83" VerticalAlignment="Top"/>
+        <Button x:Name="ClosePortButton" Content="Close" HorizontalAlignment="Left" Margin="132,226,0,0" VerticalAlignment="Top" Height="35" Width="80" Style="{DynamicResource RoundedBordersButton}" Click="Button_Click_1"/>
+        <Button x:Name="OpenPortButton" Style="{DynamicResource RoundedBordersButton}" Content="Open" HorizontalAlignment="Left" Margin="26,226,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
+        <GroupBox Header="Message" Margin="244,10,11,0" Height="404" VerticalAlignment="Top">
+            <TextBox x:Name="MessageBoxField" TextWrapping="NoWrap" Margin="2,2,2,2" BorderThickness="0,0,0,0"  />
         </GroupBox>
-        <ComboBox x:Name="StringToSendComboBox" HorizontalAlignment="Left" Margin="26,311,0,0" Width="186" Height="22" VerticalAlignment="Top">
+        <ComboBox x:Name="StringToSendComboBox" HorizontalAlignment="Left" Margin="26,315,0,0" Width="186" Height="22" VerticalAlignment="Top" SelectedIndex="1">
             <CheckBox x:Name="AddTimeCheckBox" Content="Add currect time" IsChecked="True"/>
         </ComboBox>
-        <GroupBox Header="String" ClipToBounds="True" HorizontalAlignment="Left" Width="220" Margin="10,280,0,0"/>
+        <GroupBox Header="String" ClipToBounds="True" HorizontalAlignment="Left" Width="220" Margin="10,284,0,0" Height="130" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
