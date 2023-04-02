@@ -1,2 +1,2 @@
 # Serial-Data-Send
-Programm to send custom string using serial protocol communiucation
+Program to send custom string using serial protocol communication
